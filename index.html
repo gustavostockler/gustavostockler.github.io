@@ -366,13 +366,7 @@ function renderSide(){
   h+='<div class="sbox"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>'+
     '<input id="q" type="search" placeholder="Buscar" aria-label="Buscar solução" value="'+esc(F.q)+'"></div>';
   var b='<a class="nrow" href="#todas" data-all="1"'+(r==="todas"&&!F.area.length?' aria-current="page"':'')+'>'+I.all+'<span>Todas as soluções</span></a>';
-  AREAS.forEach(function(a){
-    var vis=P.filter(function(p){return p.category===a&&match(p,"area")}),on=F.area.indexOf(a)>=0,open=GOPEN[a]!==false;
-    if(!vis.length&&!on)return;
-    b+='<div class="nfold"><button class="nrow folder'+(on?' on':'')+'" data-area="'+esc(a)+'" aria-expanded="'+open+'">'+I.chev(open)+I.fold+'<span>'+esc(a)+'</span></button>';
-    if(open)b+='<div class="nkids">'+vis.map(function(p){return '<a class="nrow leaf" href="#'+esc(p.id)+'"'+(r===p.id?' aria-current="page"':'')+'>'+I.doc+'<span>'+esc(p.title)+'</span></a>'}).join("")+'</div>';
-    b+='</div>';
-  });
+  b+=list.map(function(p){return '<a class="nrow leaf" href="#'+esc(p.id)+'"'+(r===p.id?' aria-current="page"':'')+'>'+I.doc+'<span>'+esc(p.title)+'</span></a>'}).join("");
   if(!list.length)b+='<p class="nohit">Nada encontrado.</p>';
   if(anyFilter())b+='<button class="nclear" data-clear="all">Limpar filtros</button>';
   h+=sec("sol","Soluções",b);
@@ -406,7 +400,7 @@ function formula(){return '<span class="k">=SE</span>(<span class="k">PROBLEMA</
 function cardHtml(p){
   var img=safeImg(p.preview),link=safeUrl(p.link);
   return '<article class="card"><a class="shot" href="#'+esc(p.id)+'" aria-label="Ver detalhes de '+esc(p.title)+'">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy">':'')+'</a>'+
-    '<div class="cb"><div class="meta"><span class="code">'+CODE[p.id]+'</span><span>'+esc(p.category)+'</span></div>'+
+    '<div class="cb"><div class="meta"><span>'+esc(p.category)+'</span></div>'+
     '<h3><a href="#'+esc(p.id)+'">'+esc(p.title)+'</a></h3><p>'+esc(p.summary)+'</p>'+
     '<div class="tools">'+(p.tools||[]).map(function(t){return '<span class="tool">'+esc(t)+'</span>'}).join("")+'</div>'+
     '<div class="cacts">'+(link?'<a class="btn primary sm" href="'+esc(link)+'" target="_blank" rel="noopener">Abrir projeto '+EXT+'</a>':'')+'<a class="btn sm" href="#'+esc(p.id)+'">Ver detalhes</a></div></div></article>';
@@ -444,7 +438,7 @@ function renderDetail(id){
   function note(c,t,v){return v?'<div class="note '+c+'"><h4>'+t+'</h4><p>'+esc(v)+'</p></div>':''}
   var h='<div class="crumb"><a href="#todas">Todas as soluções</a><span>/</span><span>'+esc(p.category)+'</span></div>'+
   '<article class="det"><div class="big">'+(img?'<img src="'+esc(img)+'" alt="Tela do projeto '+esc(p.title)+'">':'')+'</div>'+
-  '<div><div class="meta"><span class="code">'+CODE[p.id]+'</span></div>'+
+  '<div><div class="meta"></div>'+
   '<h2>'+esc(p.title)+'</h2><p class="lead">'+esc(p.summary)+'</p>'+
   '<dl class="facts"><div><dt>Área</dt><dd>'+esc(p.category)+'</dd></div><div><dt>Ano</dt><dd>'+esc(p.year||"—")+'</dd></div><div><dt>Ferramentas</dt><dd>'+esc((p.tools||[]).join(", "))+'</dd></div></dl>'+
   '<div class="cacts">'+(link?'<a class="btn primary" href="'+esc(link)+'" target="_blank" rel="noopener">Abrir projeto '+EXT+'</a>':'')+'</div></div>'+
