@@ -1,9 +1,0 @@
-AGENDAPRO - VERSAO NAVEGADOR
-
-1. De dois cliques em AgendaPro.html (abre no Edge ou no Chrome).
-2. Deixe a aba aberta para receber os lembretes (pode minimizar).
-3. Em Configuracoes, clique em "Permitir notificacoes".
-4. Seus dados ficam guardados neste navegador. Use Backup > Exportar
-   de vez em quando para ter uma copia de seguranca.
-
-Nao limpe os "dados de sites" do navegador sem antes exportar um backup.
