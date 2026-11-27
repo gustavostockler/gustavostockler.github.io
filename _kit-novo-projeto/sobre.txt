@@ -1,0 +1,8 @@
+Título: Nome do Projeto
+Área: Planejamento e Orçamento
+Resumo: Uma ou duas frases dizendo o que a solução faz. Aparece no cartão do Hub.
+Problema: O que dava trabalho antes. Ex.: o fechamento levava dois dias de planilhas manuais.
+Solução: Como a ferramenta resolve. Ex.: importa o razão, cruza as contas e gera o relatório pronto.
+Resultado: Opcional. Ex.: reduziu o tempo de 2 dias para 1 hora.
+Ferramentas: HTML, Excel, Claude
+Ano: 2026

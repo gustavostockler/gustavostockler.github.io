@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nome do Projeto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#F4F5F7;--surface:#fff;--ink:#15191E;--muted:#5B646E;--line:#E2E5E9;--accent:#2453C7}
+@media (prefers-color-scheme:dark){:root{--bg:#111316;--surface:#181B1F;--ink:#E8EAED;--muted:#9AA2AB;--line:#272B31;--accent:#86A8FF}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Public Sans",system-ui,sans-serif}
+header{background:var(--surface);border-bottom:1px solid var(--line);padding:1rem max(16px,4vw)}
+header h1{margin:0;font-size:1.4rem}
+header p{margin:.2rem 0 0;color:var(--muted);font-size:.95rem}
+main{max-width:1000px;margin:2rem auto;padding:0 16px;display:grid;gap:1rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.25rem}
+.card h2{margin:0 0 .5rem;font-size:1.1rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:.6rem 1rem;font-weight:600;cursor:pointer}
+.voltar{position:fixed;right:16px;bottom:16px;z-index:99999;padding:.6rem 1rem;border-radius:999px;background:#1D2530;color:#fff;font:600 14px system-ui,sans-serif;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Nome do Projeto</h1>
+  <p>Uma frase dizendo o que a ferramenta faz.</p>
+</header>
+<main>
+  <section class="card">
+    <h2>1. Importar dados</h2>
+    <p>Substitua este arquivo pelo HTML do seu projeto, mantendo o nome <b>index.html</b>.</p>
+    <button class="btn" type="button">Carregar exemplo</button>
+  </section>
+  <section class="card">
+    <h2>2. Resultado</h2>
+    <p>Aqui aparece o que a ferramenta entrega.</p>
+  </section>
+</main>
+<a class="voltar" href="../">Voltar para o Hub de Soluções IA</a>
+</body>
+</html>

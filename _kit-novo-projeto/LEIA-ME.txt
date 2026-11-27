@@ -1,0 +1,31 @@
+KIT NOVO PROJETO - HUB DE SOLUCOES IA
+=====================================
+
+Use esta pasta como ponto de partida para cada projeto novo.
+
+PASSO A PASSO
+1. Copie esta pasta no seu computador e renomeie com o nome do projeto
+   (sem o "_" na frente). Ex.: "fluxo de caixa".
+2. Troque o index.html pelo HTML do seu projeto (mantenha o nome index.html).
+3. Tire um print da tela do projeto e salve como preview.png (substitua o atual).
+4. Preencha o sobre.txt (titulo, area, resumo, problema, solucao...).
+5. Se tiver bases para o visitante testar, coloque os .xlsx/.csv/.pdf na pasta.
+6. Apague este LEIA-ME.txt (opcional; ele nao aparece no Hub).
+7. No GitHub: Add file > Upload files > arraste a PASTA > Commit changes.
+   Em uns 2 minutos o projeto aparece no Hub.
+
+CHECKLIST ANTES DE SUBIR
+[ ] So dados ficticios (sem nomes de clientes, pessoas ou da empresa)
+[ ] Sem chaves de API, senhas ou e-mails dentro do HTML
+[ ] preview.png com a tela preenchida (nao vazia)
+[ ] sobre.txt preenchido
+
+REGRAS
+- Pasta com "_" na frente fica escondida do Hub (por isso este kit nao aparece).
+- Para tirar um projeto do Hub: apague a pasta ou coloque "_" na frente do nome.
+- Na raiz do repositorio ficam so o index.html do Hub e as pastas.
+
+BOTAO "VOLTAR PARA O HUB" (opcional)
+Para o seu projeto ter o botao, cole esta linha antes de </body> no HTML:
+
+<a href="../" style="position:fixed;right:16px;bottom:16px;z-index:99999;padding:.6rem 1rem;border-radius:999px;background:#1D2530;color:#fff;font:600 14px system-ui,sans-serif;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25)">Voltar para o Hub de Soluções IA</a>
