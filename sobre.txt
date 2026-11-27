@@ -1,0 +1,7 @@
+Título: Nome do projeto
+Área: Planejamento e Orçamento
+Resumo: Uma ou duas frases dizendo o que a solução faz.
+Problema: O que dava trabalho antes.
+Solução: Como a ferramenta resolve.
+Ferramentas: HTML, Excel, Claude
+Ano: 2026
